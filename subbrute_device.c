@@ -263,11 +263,7 @@ uint8_t subbrute_device_load_from_file(SubBruteDevice* instance, const char* fil
             result = SubBruteFileResultMissingOrIncorrectFrequency;
             break;
         }
-        instance->file_protocol_info->frequency = temp_data32;
-        if(!furi_hal_subghz_is_tx_allowed(instance->file_protocol_info->frequency)) {
-            result = SubBruteFileResultFrequencyNotAllowed;
-            break;
-        }
+        
 
         // Preset
         if(!flipper_format_read_string(fff_data_file, "Preset", temp_str)) {
