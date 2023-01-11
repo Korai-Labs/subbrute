@@ -174,7 +174,6 @@ void subbrute_main_view_draw(Canvas* canvas, SubBruteMainViewModel* model) {
                         subbrute_protocol_name(position));
 
                     if(model->extra_repeats > 0) {
-                        canvas_set_font(canvas, FontBatteryPercent);
                         char buffer[10];
                         snprintf(
                             buffer,
